@@ -98,17 +98,31 @@ Semua rute API di bawah ini menggunakan basis rute langsung dari root server Exp
 | **GET** | `/explore/suggestions` | Publik | Mengambil daftar rekomendasi akun atau konten populer untuk halaman eksplorasi pengguna. |
 
 ### 8. Panduan Pemasangan Lokal
-1. Salin Environment Variables
+
+1. Clone Repository
+```bash
+git clone https://github.com/FrenzY8/Jokothread-Backend.git
+cd Jokothread-Backend
+```
+
+2. Salin Environment Variables
 Buat berkas bernama .env pada direktori root Jokothread-Backend dengan menyalin format dari .env.example:
 
 ```env
-PORT=5000
-DATABASE_URL=postgres://postgres:[PASSWORD]@[HOST]:5432/postgres
-JWT_SECRET=your_supabase_jwt_secret_or_custom_secret
+PGHOST=
+PGPORT=5432
+PGDATABASE=postgres
+PGUSER=
+PGPASSWORD=
+JWT_SECRET=
+GOOGLE_CLIENT_ID=
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_FROM_NAME=
 ```
 Catatan Keamanan: Dapatkan string koneksi database (DATABASE_URL) melalui pengaturan dasbor database Supabase Anda pada bagian Connection Pooling string.
 
-2. Jalankan Server
+3. Jalankan Server
 Eksekusi perintah berikut secara berurutan pada terminal:
 ```node
 # Masuk ke direktori backend (jika belum)
